@@ -1,0 +1,11 @@
+site_name: 软件设计能力测试
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: blue
+    accent: light blue
+nav:
+  - 首页: index.md
+  - 专题1: 日志系统设计/intro.md
+  - 专题2: 缓存系统设计/intro.md
