@@ -1,20 +1,22 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '软件设计能力测试',
+  title: '软件设计能力',
   description: '通过刻意练习，系统提升软件设计和架构能力',
   lang: 'zh-CN',
   cleanUrls: false,
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'theme-color', content: '#646cff' }]
   ],
 
   ignoreDeadLinks: true,
 
   themeConfig: {
-    logo: false,
-    
+    logo: { src: '/favicon.ico', width: 24, height: 24 },
+    siteTitle: '软件设计能力',
+
     nav: [
       { text: '首页', link: '/' },
       {
@@ -46,8 +48,7 @@ export default defineConfig({
     sidebar: {
       '/系统设计/日志系统设计/': [
         {
-          title: '日志系统设计',
-          collapsible: false,
+          text: '日志系统设计',
           items: [
             { text: '题目', link: '/系统设计/日志系统设计/' },
             { text: '提示', link: '/系统设计/日志系统设计/提示' },
@@ -58,8 +59,7 @@ export default defineConfig({
       ],
       '/系统设计/缓存系统设计/': [
         {
-          title: '缓存系统设计',
-          collapsible: false,
+          text: '缓存系统设计',
           items: [
             { text: '题目', link: '/系统设计/缓存系统设计/' },
             { text: '提示', link: '/系统设计/缓存系统设计/提示' },
@@ -70,67 +70,92 @@ export default defineConfig({
       ],
       '/存储/Redis/': [
         {
-          title: 'Redis',
-          collapsible: false,
+          text: 'Redis',
           items: [
-            { text: '专题', link: '/存储/Redis/' }
+            { text: '专题概览', link: '/存储/Redis/' }
           ]
         }
       ],
       '/存储/Kafka/': [
         {
-          title: 'Kafka',
-          collapsible: false,
+          text: 'Kafka',
           items: [
-            { text: '专题', link: '/存储/Kafka/' }
+            { text: '专题概览', link: '/存储/Kafka/' }
           ]
         }
       ],
       '/存储/MySQL/': [
         {
-          title: 'MySQL',
-          collapsible: false,
+          text: 'MySQL',
           items: [
-            { text: '专题', link: '/存储/MySQL/' }
+            { text: '专题概览', link: '/存储/MySQL/' }
           ]
         }
       ],
       '/编码设计/': [
         {
-          title: '编码设计',
-          collapsible: false,
+          text: '编码设计',
           items: [
-            { text: '专题', link: '/编码设计/' }
+            { text: '专题概览', link: '/编码设计/' }
           ]
         }
       ],
       '/基础设施/Docker-K8s/': [
         {
-          title: 'Docker/K8s',
-          collapsible: false,
+          text: '基础设施',
           items: [
-            { text: '专题', link: '/基础设施/Docker-K8s/' }
+            { text: 'Docker / K8s', link: '/基础设施/Docker-K8s/' }
           ]
         }
       ],
       '/AI/LLM/': [
         {
-          title: 'LLM',
-          collapsible: false,
+          text: 'AI',
           items: [
-            { text: '专题', link: '/AI/LLM/' }
+            { text: 'LLM', link: '/AI/LLM/' },
+            { text: 'RAG', link: '/AI/RAG/' }
           ]
         }
       ],
       '/AI/RAG/': [
         {
-          title: 'RAG',
-          collapsible: false,
+          text: 'AI',
           items: [
-            { text: '专题', link: '/AI/RAG/' }
+            { text: 'LLM', link: '/AI/LLM/' },
+            { text: 'RAG', link: '/AI/RAG/' }
           ]
         }
       ]
+    },
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/TheChosenGay/software-design-study' }
+    ],
+
+    footer: {
+      message: '刻意练习，持续精进',
+      copyright: 'Copyright © 2025'
+    },
+
+    search: {
+      provider: 'local'
+    },
+
+    outline: {
+      label: '本页目录',
+      level: [2, 3]
+    },
+
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
+
+    lastUpdated: {
+      text: '最后更新',
+      formatOptions: {
+        dateStyle: 'short'
+      }
     }
   }
 })
