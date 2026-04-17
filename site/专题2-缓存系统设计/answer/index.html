@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../../%E4%B8%93%E9%A2%981-%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/answer/">
+        <link rel="prev" href="../intro/">
       
-      
-        <link rel="next" href="../answer/">
       
       
         
@@ -23,7 +21,7 @@
     
     
       
-        <title>题目 - 软件设计能力测试</title>
+        <title>答案 - 软件设计能力测试</title>
       
     
     
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              题目
+              答案
             
           </span>
         </div>
@@ -387,6 +385,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    题目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -406,7 +432,7 @@
   <span class="md-ellipsis">
     
   
-    题目
+    答案
   
 
     
@@ -424,7 +450,7 @@
   <span class="md-ellipsis">
     
   
-    题目
+    答案
   
 
     
@@ -453,7 +479,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        题目
+        一、整体架构
       
     </span>
   </a>
@@ -464,58 +490,52 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        你的答案
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你的答案">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一版
+        二、缓存层级
       
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、Key 设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、数据更新策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、数据更新策略">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问补充
+        被动拉取（读多写少）
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问与反馈
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="追问与反馈">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1redis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        追问1：Redis 数据结构
+        主动推送（读多写多/一致性要求高）
       
     </span>
   </a>
@@ -523,21 +543,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问2：双写一致性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        追问3：客户端缓存一致性
+        版本号机制
       
     </span>
   </a>
@@ -550,10 +559,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        完整答案
+        五、穿透/击穿/雪崩
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、穿透/击穿/雪崩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        穿透：查询不存在的数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        击穿：热点 key 过期，瞬间大量请求打到数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        雪崩：大量 key 同时过期
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、大促缓存架构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、大促缓存架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-qps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景：10万 QPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、你的薄弱点
       
     </span>
   </a>
@@ -564,34 +651,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../answer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    答案
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -634,7 +693,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        题目
+        一、整体架构
       
     </span>
   </a>
@@ -645,58 +704,52 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        你的答案
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你的答案">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一版
+        二、缓存层级
       
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、Key 设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、数据更新策略
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、数据更新策略">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问补充
+        被动拉取（读多写少）
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问与反馈
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="追问与反馈">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1redis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        追问1：Redis 数据结构
+        主动推送（读多写多/一致性要求高）
       
     </span>
   </a>
@@ -704,21 +757,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2_1" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        追问2：双写一致性
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        追问3：客户端缓存一致性
+        版本号机制
       
     </span>
   </a>
@@ -731,10 +773,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        完整答案
+        五、穿透/击穿/雪崩
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、穿透/击穿/雪崩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        穿透：查询不存在的数据
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        击穿：热点 key 过期，瞬间大量请求打到数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        雪崩：大量 key 同时过期
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、大促缓存架构
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、大促缓存架构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-qps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        场景：10万 QPS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        七、你的薄弱点
       
     </span>
   </a>
@@ -758,54 +878,284 @@
 
 
 
-<h1 id="2">专题2：缓存系统设计</h1>
-<h2 id="_1">题目</h2>
-<p><strong>场景：</strong>
-电商系统，商品详情页访问量巨大，商品信息变更不频繁</p>
-<p><strong>请设计：</strong>
-1. 缓存整体架构（多少层、用什么缓存）
-2. 缓存 Key 怎么设计
-3. 缓存数据怎么更新（主动推送 vs 被动拉取）
-4. 缓存问题怎么解决（穿透、击穿、雪崩）</p>
-<p><strong>评估维度：</strong>
-- 性能
-- 一致性
-- 成本</p>
+<h1 id="2">专题2：缓存系统设计 — 完整答案</h1>
+<h2 id="_1">一、整体架构</h2>
+<pre><code>客户端（App/Web）
+    ↓ 本地缓存（LRU/容量限制）
+
+服务端：
+  读操作 → Redis → (miss) → 数据库
+  写操作 → 数据库 → (同步/异步) → Redis
+</code></pre>
 <hr />
-<h2 id="_2">你的答案</h2>
-<h3 id="_3">第一版</h3>
-<ol>
-<li>客户端缓存 + Redis 缓存（二级缓存）</li>
-<li>Key: <code>详情页:品类:id</code></li>
-<li>更新：先更新数据库和 Redis，客户端缓存靠过期或推送失效</li>
-<li>穿透：设 nil；击穿：热点永不过期</li>
-</ol>
-<h3 id="_4">追问补充</h3>
-<p><strong>客户端缓存一致性</strong>：
-- 接受用户看到旧数据 + 推送版本号通知客户端</p>
-<p><strong>穿透/击穿/雪崩</strong>：
-- 穿透：nil 返回
-- 击穿：热点永不过期
-- 雪崩：随机 TTL</p>
+<h2 id="_2">二、缓存层级</h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>组件</th>
+<th>命中率</th>
+<th>延迟</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>客户端本地缓存</td>
+<td>视业务而定</td>
+<td>&lt;1ms</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>Redis</td>
+<td>50%-90%</td>
+<td>&lt;5ms</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>数据库</td>
+<td>-</td>
+<td>10-50ms</td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="_5">追问与反馈</h2>
-<h3 id="1redis">追问1：Redis 数据结构</h3>
-<p><strong>问题</strong>：Redis 按时间戳范围查询用什么数据结构？</p>
-<p><strong>你的回答</strong>：不知道</p>
-<p><strong>正确答案</strong>：ZSET（有序集合），用时间戳作为 SCORE，支持 ZRANGEBYSCORE 命令</p>
-<h3 id="2_1">追问2：双写一致性</h3>
-<p><strong>问题</strong>：Redis 和数据库双写怎么保证一致性？</p>
-<p><strong>你的回答</strong>：事务 + 补偿</p>
-<p><strong>反馈</strong>：
-- 没有真正的"事务"，两个独立存储无法原子操作
-- 正确叫法：补偿模式（最终一致）</p>
-<h3 id="3">追问3：客户端缓存一致性</h3>
-<p><strong>问题</strong>：商品更新后，客户端缓存怎么办？</p>
-<p><strong>你的回答</strong>：接受旧数据 + 推送版本号</p>
-<p><strong>补充</strong>：版本号机制是正确的，推送轻量信息让客户端自己判断更新</p>
+<h2 id="key">三、Key 设计</h2>
+<pre><code># 商品详情
+product:detail:{product_id}
+
+# 用户会话
+session:{user_id}
+
+# 购物车
+cart:{user_id}
+</code></pre>
+<p><strong>注意</strong>：冒号 <code>:</code> 是 Redis key 的合法字符，用于分层组织。</p>
 <hr />
-<h2 id="_6">完整答案</h2>
-<p><a href="../answer/">查看完整答案</a></p>
+<h2 id="_3">四、数据更新策略</h2>
+<h3 id="_4">被动拉取（读多写少）</h3>
+<pre><code>1. 客户端先读本地缓存
+2. 本地 miss → 请求服务端
+3. 服务端查 Redis
+4. Redis miss → 查数据库，写入 Redis
+5. 返回数据，更新客户端缓存
+</code></pre>
+<h3 id="_5">主动推送（读多写多/一致性要求高）</h3>
+<pre><code>1. 商品信息更新
+2. 写数据库
+3. 删除/更新 Redis（cache aside）
+4. 推送版本号通知所有在线客户端
+5. 客户端下次访问时验证版本，发现变更后更新本地缓存
+</code></pre>
+<h3 id="_6">版本号机制</h3>
+<pre><code>商品信息：
+{
+  &quot;id&quot;: &quot;p123&quot;,
+  &quot;version&quot;: 56,
+  &quot;price&quot;: 99.9
+}
+
+客户端缓存：
+{
+  &quot;id&quot;: &quot;p123&quot;,
+  &quot;version&quot;: 55,
+  &quot;cached_price&quot;: 98.0
+}
+
+客户端验证流程：
+1. 请求 GET /product/p123/version
+2. 服务端返回 {version: 56}
+3. 发现本地 55 &lt; 远端 56
+4. 下载完整数据更新本地缓存
+</code></pre>
+<hr />
+<h2 id="_7">五、穿透/击穿/雪崩</h2>
+<h3 id="_8">穿透：查询不存在的数据</h3>
+<p><strong>问题</strong>：大量请求查询不存在的数据，每次都打到数据库。</p>
+<p><strong>方案</strong>：</p>
+<pre><code class="language-python">def get_product(product_id):
+    # 1. 查 Redis
+    value = redis.get(f&quot;product:detail:{product_id}&quot;)
+    if value:
+        return value
+
+    # 2. 查数据库
+    product = db.query(&quot;SELECT * FROM products WHERE id = ?&quot;, product_id)
+
+    if product:
+        # 存在，写入缓存
+        redis.setex(f&quot;product:detail:{product_id}&quot;, ttl, product)
+        return product
+    else:
+        # 不存在，写入空值标记（防穿透）
+        redis.setex(f&quot;product:detail:{product_id}&quot;, short_ttl, &quot;NULL&quot;)
+        return None
+</code></pre>
+<p><strong>空值缓存 TTL</strong>：设短一点（30秒-5分钟），防止长期存储无效数据。</p>
+<hr />
+<h3 id="key_1">击穿：热点 key 过期，瞬间大量请求打到数据库</h3>
+<p><strong>问题</strong>：某个热点商品缓存过期瞬间，所有请求都去查数据库。</p>
+<p><strong>方案A：永不过期 + 异步更新</strong></p>
+<pre><code class="language-python">def get_product(product_id):
+    value = redis.get(f&quot;product:detail:{product_id}&quot;)
+    if value == &quot;NULL&quot;:
+        return None
+    if value:
+        return value
+
+    # 回源
+    product = db.query(product_id)
+    if product:
+        # 不设过期时间，定期异步刷新
+        redis.set(f&quot;product:detail:{product_id}&quot;, product)
+        return product
+
+    return None
+
+# 定时任务刷新热点数据
+def refresh_hot_products():
+    hot_products = get_hot_products()  # 从访问日志得出
+    for p in hot_products:
+        redis.set(f&quot;product:detail:{p.id}&quot;, p)
+</code></pre>
+<p><strong>方案B：互斥锁</strong></p>
+<pre><code class="language-python">import redis
+
+def get_product(product_id):
+    value = redis.get(f&quot;product:detail:{product_id}&quot;)
+    if value:
+        return value
+
+    lock_key = f&quot;lock:product:detail:{product_id}&quot;
+
+    # 尝试获取锁
+    lock = redis.set(lock_key, &quot;1&quot;, nx=True, ex=10)
+    if lock:
+        try:
+            # 只有一个请求回源
+            product = db.query(product_id)
+            redis.setex(f&quot;product:detail:{product_id}&quot;, ttl, product)
+            return product
+        finally:
+            redis.delete(lock_key)
+    else:
+        # 其他请求等待后重试
+        time.sleep(0.1)
+        return get_product(product_id)
+</code></pre>
+<hr />
+<h3 id="key_2">雪崩：大量 key 同时过期</h3>
+<p><strong>问题</strong>：大量缓存 key 设了相同的过期时间，到期后同时失效。</p>
+<p><strong>方案</strong>：</p>
+<pre><code class="language-python"># 给 TTL 加随机偏移
+base_ttl = 3600  # 1小时
+actual_ttl = base_ttl + random.randint(0, 1800)  # 1小时~1.5小时
+
+redis.setex(key, actual_ttl, value)
+</code></pre>
+<p><strong>热点数据多副本</strong>：</p>
+<pre><code class="language-python"># 同一个数据存多个 key，TTL 不同
+redis.setex(f&quot;product:detail:{id}:v1&quot;, 3600, data)
+redis.setex(f&quot;product:detail:{id}:v2&quot;, 5400, data)  # 晚失效
+redis.setex(f&quot;product:detail:{id}:v3&quot;, 7200, data)  # 更晚失效
+</code></pre>
+<hr />
+<h2 id="_9">六、大促缓存架构</h2>
+<h3 id="10-qps">场景：10万 QPS</h3>
+<p><strong>Q1：Redis 单实例能抗住吗？</strong></p>
+<p>可以。Redis 单实例 QPS 10万+ 没问题。</p>
+<p>但集群是为了<strong>可用性</strong>，不是<strong>性能</strong>。</p>
+<p><strong>Q2：Redis Cluster vs 代理模式</strong></p>
+<table>
+<thead>
+<tr>
+<th>对比</th>
+<th>Redis Cluster</th>
+<th>Twemproxy/Codis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>架构</td>
+<td>无中心，直连各节点</td>
+<td>有代理，转发请求</td>
+</tr>
+<tr>
+<td>跨 Key 操作</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>运维复杂度</td>
+<td>高</td>
+<td>低</td>
+</tr>
+<tr>
+<td>适用</td>
+<td>小规模、多语言</td>
+<td>中大规模、批量操作多</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Q3：大促预热</strong></p>
+<pre><code class="language-python">def preheat_cache():
+    # 1. 从促销系统获取活动商品
+    promotion_products = get_promotion_products()  # 10万个
+
+    # 2. 分批次预热，每批1000个
+    batch_size = 1000
+    for i in range(0, len(promotion_products), batch_size):
+        batch = promotion_products[i:i+batch_size]
+
+        # 从数据库批量读取
+        products = db.batch_get(batch)
+
+        # 批量写入 Redis
+        pipe = redis.pipeline()
+        for p in products:
+            key = f&quot;product:detail:{p.id}&quot;
+            pipe.setex(key, longer_ttl, p)
+        pipe.execute()
+
+        print(f&quot;预热进度: {i+batch_size}/{len(promotion_products)}&quot;)
+        time.sleep(5)  # 控制速度，不打爆数据库
+</code></pre>
+<hr />
+<h2 id="_10">七、你的薄弱点</h2>
+<table>
+<thead>
+<tr>
+<th>薄弱点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redis 数据结构选型</td>
+<td>范围查询用 ZSET，不是 String/Hash</td>
+</tr>
+<tr>
+<td>客户端缓存一致性</td>
+<td>版本号机制是标准做法</td>
+</tr>
+<tr>
+<td>双写一致性</td>
+<td>没有真正的事务，正确的是"补偿模式"</td>
+</tr>
+<tr>
+<td>缓存问题场景化</td>
+<td>穿透/击穿/雪崩的解决方案和适用场景</td>
+</tr>
+<tr>
+<td>Redis 集群</td>
+<td>Cluster vs 代理模式的选择依据</td>
+</tr>
+<tr>
+<td>预热策略</td>
+<td>速度控制、验证机制</td>
+</tr>
+</tbody>
+</table>
 
 
 
