@@ -4,10 +4,11 @@ export default defineConfig({
   title: '软件设计能力',
   description: '通过刻意练习，系统提升软件设计和架构能力',
   lang: 'zh-CN',
+  base: '/software-design-study/',
   cleanUrls: false,
 
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/software-design-study/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#646cff' }]
   ],
 
