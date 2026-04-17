@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as d,ae as r}from"./chunks/framework.Czhw_PXq.js";const f=JSON.parse('{"title":"存储","description":"","frontmatter":{},"headers":[],"relativePath":"存储/README.md","filePath":"存储/README.md"}'),o={name:"存储/README.md"};function h(n,t,s,i,_,l){return e(),d("div",null,[...t[0]||(t[0]=[r("",4)])])}const p=a(o,[["render",h]]);export{f as __pageData,p as default};
