@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as r,ae as d}from"./chunks/framework.Czhw_PXq.js";const m=JSON.parse('{"title":"AI","description":"","frontmatter":{},"headers":[],"relativePath":"ai/README.md","filePath":"ai/README.md"}'),o={name:"ai/README.md"};function i(h,t,l,n,s,_){return e(),r("div",null,[...t[0]||(t[0]=[d("",4)])])}const p=a(o,[["render",i]]);export{m as __pageData,p as default};
