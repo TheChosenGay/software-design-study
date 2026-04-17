@@ -1,0 +1,12 @@
+{
+  "name": "software-design-study",
+  "version": "1.0.0",
+  "description": "软件设计能力测试",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
