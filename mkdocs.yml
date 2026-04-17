@@ -7,5 +7,9 @@ theme:
     accent: light blue
 nav:
   - 首页: index.md
-  - 专题1: 日志系统设计/intro.md
-  - 专题2: 缓存系统设计/intro.md
+  - 日志系统设计:
+      - 题目: "专题1-日志系统设计/intro.md"
+      - 答案: "专题1-日志系统设计/answer.md"
+  - 缓存系统设计:
+      - 题目: "专题2-缓存系统设计/intro.md"
+      - 答案: "专题2-缓存系统设计/answer.md"
