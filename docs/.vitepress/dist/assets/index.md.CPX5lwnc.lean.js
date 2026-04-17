@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as r,ae as o}from"./chunks/framework.Czhw_PXq.js";const u=JSON.parse('{"title":"软件设计能力测试","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),d={name:"index.md"};function i(l,t,n,s,h,c){return e(),r("div",null,[...t[0]||(t[0]=[o("",9)])])}const b=a(d,[["render",i]]);export{u as __pageData,b as default};
