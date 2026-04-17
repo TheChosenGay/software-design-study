@@ -1,4 +1,4 @@
-# 专题1：日志系统设计
+# 日志系统设计
 
 ## 题目
 
@@ -21,47 +21,123 @@
 
 ---
 
-## 你的答案（第一版）
+<details>
+<summary><strong>💡 提示：应该从哪些方面考虑？</strong></summary>
 
-1. C/S 分离，本地 SDK 写内存缓存，异步推送到日志服务端
-2. 服务端按业务区分队列，每个业务注册一个 topic
-3. 用 Kafka 做队列，消费者落库到时间序数据库
-4. 日志格式：`topic + user + level + module + file + line + logmsg`
+**1. 日志采集和上报**
+- SDK 如何设计？（内存缓冲、异步推送）
+- 网络传输用什么协议？（MQTT？HTTP？）
+- 服务端如何接收？（Kafka？直接落库？）
 
----
+**2. 日志存储**
+- 时序数据库 vs MySQL vs 其他？
+- 表结构怎么设计？
+- 索引怎么建？
+- 数据生命周期怎么管？
 
-## 追问与反馈
+**3. 日志查询**
+- 冷热数据怎么分离？
+- 热数据用什么缓存？
+- 查询入口怎么路由？
 
-### 追问1：Kafka Topic 怎么划分？
+**4. 高并发场景**
+- 10万/秒写入怎么抗住？
+- 需要集群吗？
+- 消费者怎么设计？
 
-**你的回答**：按日志级别划分，消费者根据业务字段路由到不同表
-
-**评价**：方向正确。Kafka topic 应按固定维度（级别）划分，而非随业务增长。
-
-### 追问2：存储选型？
-
-**你的回答**：时序数据库，天然按时间有序
-
-**评价**：正确。时序数据库（ClickHouse）比 MySQL 更适合大量时间序列数据。
-
-### 追问3：冷热数据架构
-
-**你的回答**：Redis 缓存最近 1 小时热数据，所有数据落库
-
-**问题**：
-- Redis 按时间戳范围查询用什么数据结构？
-- ZSET 是正确答案，String/Hash 无法高效范围查询
-
-### 追问4：缓存穿透/击穿
-
-**你的回答**：
-- 穿透：缓存空值
-- 击穿：随机 TTL + 永不过期
-
-**评价**：基本正确，但需要根据场景细化。
+</details>
 
 ---
 
-## 完整答案
+<details>
+<summary><strong>📝 答案</strong></summary>
 
-[查看完整答案](./answer.md)
+### 整体架构
+
+```
+App(SDK) → Kafka → 消费者 → ClickHouse（冷数据）
+              ↓           ↓
+           Redis ← ZSET（热数据）
+              ↓
+         查询入口(路由层)
+```
+
+### 日志格式
+
+```json
+{
+  "topic": "error",
+  "business": "payment",
+  "user_id": "u12345",
+  "level": "error",
+  "module": "OrderService",
+  "file": "OrderController.m",
+  "line": 128,
+  "msg": "order create failed",
+  "timestamp": 1710000000
+}
+```
+
+### Kafka 设计
+
+**Topic 划分**：按日志级别，分 3 个 topic
+
+```
+log-error
+log-warn
+log-info
+```
+
+消费者根据日志的 `business` 字段路由到不同的库表。
+
+### ClickHouse 表结构
+
+```sql
+CREATE TABLE guild_log.log_error_payment (
+    timestamp     DateTime64(3),
+    user_id       String,
+    level         String,
+    module        String,
+    file          String,
+    line          UInt32,
+    msg           String
+) ENGINE = MergeTree()
+PARTITION BY toYYYYMM(timestamp)
+ORDER BY (timestamp, user_id)
+TTL timestamp + INTERVAL 30 DAY;
+```
+
+### Redis ZSET 热数据
+
+```python
+# Key: log:{business}:{level}:recent
+# 存疑问题：TTL设多长？
+# 答案：1小时~1.5小时随机，防止雪崩
+
+TTL = 3600 + random.randint(0, 1800)
+redis.zadd("log:payment:error:recent", {json: ts})
+```
+
+### 冷热数据路由
+
+```python
+if 查询时间范围.end < now - 1小时:
+    # 全是冷数据，查ClickHouse
+elif 查询时间范围.start >= now - 1小时:
+    # 全是热数据，查Redis
+else:
+    # 跨冷热，两者都查再合并
+```
+
+### 双写一致性
+
+Redis 和 ClickHouse 无法保证强一致，只能最终一致：
+
+- 失败时记录补偿队列
+- 两个都失败则入DLQ报警
+
+</details>
+
+---
+
+**[← 返回系统设计](../intro.md)**
