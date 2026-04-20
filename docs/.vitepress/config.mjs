@@ -99,7 +99,8 @@ export default defineConfig({
           items: [
             { text: '专题概览', link: '/编码设计/' },
             { text: '代码抽象', link: '/编码设计/代码抽象' },
-            { text: '依赖管理', link: '/编码设计/依赖管理' }
+            { text: '依赖管理', link: '/编码设计/依赖管理' },
+            { text: '代码架构管理', link: '/编码设计/代码架构管理' }
           ]
         }
       ],
