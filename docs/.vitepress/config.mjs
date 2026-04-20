@@ -97,7 +97,8 @@ export default defineConfig({
         {
           text: '编码设计',
           items: [
-            { text: '专题概览', link: '/编码设计/' }
+            { text: '专题概览', link: '/编码设计/' },
+            { text: '代码抽象', link: '/编码设计/代码抽象' }
           ]
         }
       ],
